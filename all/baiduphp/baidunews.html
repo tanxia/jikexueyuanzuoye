@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bainews-front</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/news.css">
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src='js/news.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">精选</a><i></i></li>
+                <li><a href="#">百家</a><i></i></li>
+                <li><a href="#">本地</a><i></i></li>
+                <li><a href="#">娱乐</a><i></i></li>
+                <li><a href="#">图片</a><i></i></li>
+                <li><a href="#">社会</a><i></i></li>
+                <li><a href="#">军事</a><i></i></li>
+                <li><a href="#">女人</a><i></i></li>
+                <li><a href="#">搞笑</a><i></i></li>
+                <li><a href="#">互联网</a><i></i></li>
+                <li><a href="#">更多</a><i></i></li>
+            </ul>
+        </nav>
+        <article>
+            <ul class="news-lists">
+            </ul>
+        </article>
+    </div>
+      <script type="text/javascript">
+    $(document).ready(function() {
+        var bodyWith = $('body').width();
+        $('.newsimg a img').width(bodyWith / 4);
+        $('.newsimg a img').height($('.newscontent').height());
+        $('.newscontent').width(bodyWith / 2);
+        $('nav ul li').each(function(index, item) {
+            if ($(this).find('a').html().split('').length > 2) {
+                $(this).width(bodyWith / 3);
+            } else {
+                $(this).width(bodyWith / 6);
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
